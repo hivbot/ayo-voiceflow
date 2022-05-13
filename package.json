@@ -26,7 +26,7 @@
     "@voiceflow/natural-language-commander": "^0.5.1",
     "@voiceflow/verror": "^1.1.0",
     "@voiceflow/voice-types": "2.5.22",
-    "@voiceflow/voiceflow-types": "3.13.4",
+    "@voiceflow/voiceflow-types": "3.14.0",
     "ajv": "6.12.3",
     "axios": "^0.21.1",
     "compression": "^1.7.4",

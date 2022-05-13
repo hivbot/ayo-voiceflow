@@ -1437,10 +1437,10 @@
   dependencies:
     "@voiceflow/base-types" "^2.24.2"
 
-"@voiceflow/voiceflow-types@3.13.4":
-  version "3.13.4"
-  resolved "https://registry.yarnpkg.com/@voiceflow/voiceflow-types/-/voiceflow-types-3.13.4.tgz#cfa7696d6e836a7eb399195a28a413e5a0a2cf3b"
-  integrity sha512-F42y6/g4cTRxAyYc+tbgYUdIN1jEd5cwmS+9RSypyNa1VpxwfctnIZWbMqUarv3E02wLlxPdkUgyA7jNKivICQ==
+"@voiceflow/voiceflow-types@3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@voiceflow/voiceflow-types/-/voiceflow-types-3.14.0.tgz#23e1247e8b74f3aa82098fe308842eb896f367db"
+  integrity sha512-IuhslQDAtHTY08NbEKhIoGapmkXvAemUoToKKWZNPLtlTFSki8VzNWE3kATHqvhyQCXmBoGl8kyGn4OX6UxfTg==
   dependencies:
     "@voiceflow/base-types" "^2.24.2"
     "@voiceflow/chat-types" "^2.7.8"
