@@ -7,6 +7,7 @@ export class AnalyticsClient {
 
   public async getClient() {
     // eslint-disable-next-line import/no-extraneous-dependencies
+    // @ts-ignore
     const sdk = await import('@voiceflow/sdk-analytics').catch(() => null);
     if (!sdk) return undefined;
 

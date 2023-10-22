@@ -27,6 +27,7 @@ class Auth extends AbstractMiddleware {
 
   private getClient = async () => {
     // eslint-disable-next-line import/no-extraneous-dependencies
+    // @ts-ignore
     const sdk = await import('@voiceflow/sdk-auth').catch(() => null);
     if (!sdk) return undefined;
 
@@ -58,6 +59,7 @@ class Auth extends AbstractMiddleware {
         if (!client) return next();
 
         // eslint-disable-next-line import/no-extraneous-dependencies
+        // @ts-ignore
         const sdk = await import('@voiceflow/sdk-auth/express').catch(() => null);
         if (!sdk) return next();
 

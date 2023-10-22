@@ -11,6 +11,7 @@ export class BillingService extends AbstractManager {
 
   private async getClient() {
     // eslint-disable-next-line import/no-extraneous-dependencies
+    // @ts-ignore
     const sdk = await import('@voiceflow/sdk-billing').catch(() => null);
     if (!sdk) return undefined;
 
