@@ -2,8 +2,9 @@ name: Create and publish a Docker image
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - prod-*
+      - test-*
 
 env:
   REGISTRY: ghcr.io
@@ -27,6 +28,14 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set Dockerfile Name
+        run: |
+          if [[ "${{ github.ref }}" == refs/tags/prod-* ]]; then
+            echo "DOCKERFILE=Dockerfile.prod" >> $GITHUB_ENV
+          else
+            echo "DOCKERFILE=Dockerfile.test" >> $GITHUB_ENV
+          fi
+
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@master
@@ -37,7 +46,7 @@ jobs:
         uses: docker/build-push-action@master
         with:
           context: .
-          file: Dockerfile.ayo
+          file: ${{ env.DOCKERFILE }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
