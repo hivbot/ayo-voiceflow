@@ -6,6 +6,14 @@ on:
       - prod-*
       - test-*
 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy (test or prod)'
+        required: true
+        default: 'test'
+
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
